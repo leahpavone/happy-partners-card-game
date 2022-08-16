@@ -89,11 +89,11 @@ button {
   border-radius: 50%;
 }
 
-.prev-btn {
+/* .prev-btn {
 }
 
 .next-btn {
-}
+} */
 
 .random-btn {
   margin: 0 auto;
@@ -101,9 +101,47 @@ button {
   text-transform: uppercase;
 }
 
-.prev-deck-btn {
+/* .prev-deck-btn {
   background-color: #777;
+} */
+
+/* .next-deck-btn {
+} */
+
+/* Media Queries */
+
+@media only screen and (max-width: 1100px) {
+  .card-text-1,
+  .card-text-2 {
+    font-size: 24px;
+  }
+
+  .card-subtext {
+    font-size: 14px;
+  }
 }
 
-.next-deck-btn {
+@media only screen and (max-width: 768px) {
+  .card-text-1,
+  .card-text-2 {
+    font-size: 20px;
+  }
+
+  .card-subtext {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .card-ctr {
+    padding: 30px 20px;
+  }
+
+  .card-text-1,
+  .card-text-2 {
+    font-size: 14px;
+  }
+
+  .card-subtext {
+    width: 70%;
+  }
 }

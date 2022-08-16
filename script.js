@@ -374,7 +374,7 @@ const cards = [
     text1: "What's your love language? + QR Code",
     text2:
       "- Acts of Service - Words of Affirmation - Physical Touch  - Quality Time - Receiving Gifts",
-    subtext: "qrCode"
+    subtext: ""
   },
   {
     id: 43,
