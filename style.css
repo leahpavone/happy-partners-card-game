@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 18px;
+  color: #333;
+  padding: 30px;
+  background-color: #1a1a1a;
+}
+
+.card-ctr {
+  width: 75vw;
+  height: 75vh;
+  margin: 0 auto;
+  /* background-color: lightblue; */
+  /* border: 3px solid #222125; */
+  border-radius: 12px;
+  padding: 30px 40px;
+  position: relative;
+}
+
+.card-category {
+  text-align: right;
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(0, 0, 0, 0.5);
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  text-transform: uppercase;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+  /* position: relative; */
+}
+
+.card-text-1,
+.card-text-2 {
+  font-size: 30px;
+}
+
+.card-text-1 {
+  padding-bottom: 30px;
+}
+
+.card-subtext {
+  width: 40%;
+  height: 100%;
+  align-self: flex-end;
+
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
+  font-size: 18px;
+}
+
+.btn-ctr {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #999;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 50%;
+}
+
+.prev-btn {
+}
+
+.next-btn {
+}
+
+.random-btn {
+  margin: 0 auto;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.prev-deck-btn {
+  background-color: #777;
+}
+
+.next-deck-btn {
+}
