@@ -23,15 +23,24 @@
         <span class="card-text-1"></span>
         <span class="card-text-2"></span>
         <span class="card-subtext"></span>
+        <div class="image"></div>
       </div>
     </div>
     <div class="btn-ctr">
-      <!-- <button class="prev-deck-btn">&lArr;</button> -->
-      <button class="prev-btn">&larr;</button>
-      <button class="next-btn">&rarr;</button>
-      <!-- <button class="next-deck-btn">&rArr;</button> -->
+      <button title="Previous Deck" class="prev-deck-btn">
+        <img src="static/arrow-left.svg" alt="left arrow" />
+      </button>
+      <button title="Previous Card" class="prev-btn">
+        <img src="static/arrow-left-small.svg" alt="small left arrow" />
+      </button>
+      <button title="Next Card" class="next-btn">
+        <img src="static/arrow-right-small.svg" alt="small right arrow" />
+      </button>
+      <button title="Next Deck" class="next-deck-btn">
+        <img src="static/arrow-right.svg" alt="right arrow" />
+      </button>
     </div>
-    <button class="random-btn">random</button>
-    <script type="text/javascript" src="script.js"></script>
+    <button title="Random Card" class="random-btn">random</button>
+    <script type="module" src="script.js"></script>
   </body>
 </html>

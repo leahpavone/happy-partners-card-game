@@ -1,4 +1,4 @@
-const dataStructure = [
+export const dataStructure = [
   {
     name: "Re-friending",
     cards: [
@@ -394,7 +394,7 @@ const dataStructure = [
       {
         category: "conflict",
         text1: "What is something that you would like me to do less?",
-        text2: "What is something you would like me to start doing more?",
+        text2: "What is something you would lime me to start doing more?",
         subtext: ""
       },
       {
@@ -573,119 +573,3 @@ const dataStructure = [
     ]
   }
 ];
-
-const cardContainer = document.querySelector(".card-ctr");
-const id = document.querySelector(".card-id");
-const text1 = document.querySelector(".card-text-1");
-const text2 = document.querySelector(".card-text-2");
-const subtext = document.querySelector(".card-subtext");
-const category = document.querySelector(".card-category");
-const imageDiv = document.querySelector(".image");
-
-const prevBtn = document.querySelector(".prev-btn");
-const nextBtn = document.querySelector(".next-btn");
-const randomBtn = document.querySelector(".random-btn");
-
-const prevDeckBtn = document.querySelector(".prev-deck-btn");
-const nextDeckBtn = document.querySelector(".next-deck-btn");
-
-const imageElement = document.createElement("img");
-
-let currentCard = 0;
-let currentDeck = 0;
-
-window.addEventListener("DOMContentLoaded", function () {
-  showCard();
-});
-
-function showCard() {
-  let cardData = dataStructure[currentDeck].cards[currentCard];
-  category.textContent = cardData.category;
-  text1.textContent = cardData.text1;
-  text2.textContent = cardData.text2;
-  // console.log(Card.subtext.includes(".svg"));
-
-  if (cardData.subtext === "static/qr-code.svg") {
-    subtext.textContent = "";
-    imageElement.style.display = "block";
-    imageElement.setAttribute("src", cardData.subtext);
-    imageElement.setAttribute("alt", "QR Code");
-    imageElement.setAttribute("height", 100);
-    imageElement.setAttribute("width", 100);
-    imageDiv.appendChild(imageElement);
-  } else {
-    imageElement.style.display = "none";
-    subtext.textContent = cardData.subtext;
-  }
-
-  if (cardData.category === "re-friending") {
-    cardContainer.style.backgroundColor = "#33658a";
-  } else if (cardData.category === "gratitude") {
-    cardContainer.style.backgroundColor = "#dda77b";
-  } else if (cardData.category === "connection") {
-    cardContainer.style.backgroundColor = "#b19eff";
-  } else if (cardData.category === "conflict") {
-    cardContainer.style.backgroundColor = "#b95f89";
-  } else if (cardData.category === "future") {
-    cardContainer.style.backgroundColor = "#92bfb1";
-  }
-}
-
-function showDeck() {
-  let deckData = dataStructure[currentDeck];
-  return showCard(deckData);
-}
-
-nextBtn.addEventListener("click", function () {
-  currentCard++;
-  if (dataStructure[currentDeck].cards.length === currentCard) {
-    currentDeck++;
-    currentCard = 0;
-    if (dataStructure.length === currentDeck) {
-      currentDeck = 0;
-    }
-  }
-  showCard();
-});
-
-prevBtn.addEventListener("click", function () {
-  currentCard--;
-  if (currentCard < 0) {
-    currentDeck--;
-    if (currentDeck < 0) {
-      currentDeck = dataStructure.length - 1;
-    }
-    currentCard = dataStructure[currentDeck].cards.length - 1;
-  }
-  showCard();
-});
-
-randomBtn.addEventListener("click", function () {
-  currentDeck = Math.floor(Math.random() * dataStructure.length);
-  currentCard = Math.floor(
-    Math.random() * dataStructure[currentDeck].cards.length
-  );
-  console.log(currentCard);
-  showCard();
-});
-
-nextDeckBtn.addEventListener("click", function () {
-  currentDeck++;
-  if (currentDeck > dataStructure.length - 1) {
-    currentDeck = 0;
-  }
-  console.log(currentDeck);
-  showDeck();
-});
-
-prevDeckBtn.addEventListener("click", function () {
-  currentDeck--;
-  if (currentDeck < 0) {
-    console.log(currentDeck);
-    currentDeck = dataStructure.length - 1;
-  }
-
-  console.log(currentDeck < 0);
-  console.log(currentDeck);
-  showDeck();
-});
