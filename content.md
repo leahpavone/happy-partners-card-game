@@ -77,7 +77,7 @@ Both partners: Read these aloud to start.
 - What quirk that is unique to me do you find cute, endearing or charming?
 
 - Share something that you've been struggling with.
-- Give your partner 2 - 3 minutes to present ideas and possible solutions. -->
+- Give your partner 2 - 3 minutes to present ideas and possible solutions.
 
 # Gratitude
 
@@ -327,4 +327,4 @@ Both partners: Read these aloud to start.
   - Briefly discuss what might prevent that from happening and how, together, you can make it happen. Even better, calendar it now!
 
 - By (blank)(time), I'd love for us to have done together (blank).
-  - Briefly discuss what might prevent that from happening and how, together, you can make it happen.
+  - Briefly discuss what might prevent that from happening and how, together, you can make it happen. -->
