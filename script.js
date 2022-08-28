@@ -251,7 +251,7 @@ const dataStructure = [
         category: "connection",
         text1:
           "Using the emoji ranking system, how would you describe our sex life?",
-        text2: "1 - emoji 2 - emoji 3 - emoji",
+        text2: "1. 😕     2. 😎     3. 🤤",
         subtext:
           "Close your eyes and use your fingers to show your answer. Open your eyes simultaneously."
       },
@@ -303,7 +303,7 @@ const dataStructure = [
       },
       {
         category: "connection",
-        text1: "What's your love language? + QR Code",
+        text1: "What's your love language?",
         text2:
           "- Acts of Service - Words of Affirmation - Physical Touch  - Quality Time - Receiving Gifts",
         subtext: "static/qr-code.svg"
@@ -574,6 +574,7 @@ const dataStructure = [
   }
 ];
 
+const container = document.querySelector(".container");
 const cardContainer = document.querySelector(".card-ctr");
 const id = document.querySelector(".card-id");
 const text1 = document.querySelector(".card-text-1");
@@ -689,3 +690,16 @@ prevDeckBtn.addEventListener("click", function () {
   console.log(currentDeck);
   showDeck();
 });
+
+//  handle window size
+
+function handleResize() {
+  let newHeight = window.innerHeight;
+  // document.body.style.minHeight = newHeight;
+  container.style.minHeight = newHeight;
+  console.log(newHeight);
+}
+
+window.addEventListener("resize", handleResize);
+// calling the function for the first time
+handleResize();

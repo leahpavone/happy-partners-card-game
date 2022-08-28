@@ -16,31 +16,33 @@
 
     <title>Happy Partners Card Game</title>
   </head>
-  <body>
-    <div class="card-ctr">
-      <div class="card-category"></div>
-      <div class="card">
-        <span class="card-text-1"></span>
-        <span class="card-text-2"></span>
-        <span class="card-subtext"></span>
-        <div class="image"></div>
+  <body id="app">
+    <div class="container">
+      <div class="card-ctr">
+        <div class="card-category"></div>
+        <div class="card">
+          <span class="card-text-1"></span>
+          <span class="card-text-2"></span>
+          <span class="card-subtext"></span>
+          <div class="image"></div>
+        </div>
       </div>
+      <div class="btn-ctr">
+        <button title="Previous Deck" class="prev-deck-btn">
+          <img src="static/arrow-left.svg" alt="left arrow" />
+        </button>
+        <button title="Previous Card" class="prev-btn">
+          <img src="static/arrow-left-small.svg" alt="small left arrow" />
+        </button>
+        <button title="Next Card" class="next-btn">
+          <img src="static/arrow-right-small.svg" alt="small right arrow" />
+        </button>
+        <button title="Next Deck" class="next-deck-btn">
+          <img src="static/arrow-right.svg" alt="right arrow" />
+        </button>
+      </div>
+      <button title="Random Card" class="random-btn">random</button>
     </div>
-    <div class="btn-ctr">
-      <button title="Previous Deck" class="prev-deck-btn">
-        <img src="static/arrow-left.svg" alt="left arrow" />
-      </button>
-      <button title="Previous Card" class="prev-btn">
-        <img src="static/arrow-left-small.svg" alt="small left arrow" />
-      </button>
-      <button title="Next Card" class="next-btn">
-        <img src="static/arrow-right-small.svg" alt="small right arrow" />
-      </button>
-      <button title="Next Deck" class="next-deck-btn">
-        <img src="static/arrow-right.svg" alt="right arrow" />
-      </button>
-    </div>
-    <button title="Random Card" class="random-btn">random</button>
     <script type="module" src="script.js"></script>
   </body>
 </html>
